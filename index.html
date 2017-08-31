@@ -2,7 +2,7 @@
 	<head>
 		<style>
 			#item{
-				display: block;
+				display: none;
 				position: relative;
 				left:0px;
 				height: 100px;
@@ -14,18 +14,16 @@
 		<script>
 			$(document).ready(function(){
 			
-				$("#animate_button").click(function(){
-					$("#item").animate({
-						opacity: 0.5,
-						left: "+=50",
-					}, 1000);
-				});
-				
+				$('#chain_button').click(function() {
+					$("#item").fadeIn('slow').fadeOut('slow').fadeIn('slow').
+					fadeOut('slow').slideDown('slow').slideUp('slow');
+				})
+					
 			});
 		</script>
 	</head>
 	<body>
-		<button id="animate_button">Animate Button</button>
-		<div id="item">Animate me</div>
+		<button id="chain_button">Chain Button</button>
+		<div id="item">Chain me</div>
 	</body>
 </html>
