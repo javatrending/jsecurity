@@ -3,6 +3,8 @@
 		<style>
 			#item{
 				display: block;
+				position: relative;
+				left:0px;
 				height: 100px;
 				width: 100px;
 				border: 1px solid black;
@@ -11,14 +13,19 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script>
 			$(document).ready(function(){
-				$("#toggle_button").click(function(){
-					$("#item").toggle();
+			
+				$("#animate_button").click(function(){
+					$("#item").animate({
+						opacity: 0.5,
+						left: "+=50",
+					}, 1000);
 				});
+				
 			});
 		</script>
 	</head>
 	<body>
-		<button id="toggle_button">Toggle Me</button>
-		<div id="item">I am item</div>
+		<button id="animate_button">Animate Button</button>
+		<div id="item">Animate me</div>
 	</body>
 </html>
