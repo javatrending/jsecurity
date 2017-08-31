@@ -11,19 +11,14 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script>
 			$(document).ready(function(){
-				$("#hide").click(function(){
-					$("#item").hide();
-				});
-				
-				$("#show").click(function(){
-					$("#item").show();
+				$("#toggle_button").click(function(){
+					$("#item").toggle();
 				});
 			});
 		</script>
 	</head>
 	<body>
-		<button id="show">Show Me</button>
-		<button id="hide">Hide Me</button>
+		<button id="toggle_button">Toggle Me</button>
 		<div id="item">I am item</div>
 	</body>
 </html>
